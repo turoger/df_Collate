@@ -1,6 +1,11 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
 
 import os
-import das.dataframe as ddf
+import dask.dataframe as ddf
 import pandas as pd
 import numpy as np
 
@@ -15,7 +20,7 @@ def big_ddf (directory_to_traits_table,
     '''
     
     trait_dict = ukbbTT_to_dict(directory_to_traits_table)
-    pheno_dict = reader(directory_of_phenotypes, phenotype_list, filename_type, trait_dict)
+    pheno_dict = reader(directory_to_phenotypes, phenotype_list, filename_type, trait_dict)
     a_ddf = ddf_collapser(pheno_dict)
     a_ddf = ddf_MAF_Add(directory_to_MAF, a_ddf)
     a_ddf = ddf_Gene_Add(a_ddf, gene_name, directory_to_rsid)
@@ -66,7 +71,7 @@ def reader (directory, phenoID_list, filename, trait_dict):
         
         for fn in os.listdir():
             if fn.startswith(filename):
-                val = ddf.read_csv(fn sep = ' ',
+                val = ddf.read_csv(fn, sep = ' ',
                                   header = 0,                                               # Ignore initial Headers
                                   names = ['SNP', 'ALLELE', 'iScore', 'BETA', 'NSE', 'PV'], # Specifies Headers
                                   dtype = {'SNP': object,
@@ -142,3 +147,4 @@ def ddf_Gene_Add(a_ddf, gene, rsid_file_path):
     a_ddf['Gene'] = a_ddf['Gene'].map(booleanDict)                                            # change col vals based on mapping
     
     return(a_ddf)
+
