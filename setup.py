@@ -1,4 +1,3 @@
-
 from distutils.core import setup
 
 setup(
@@ -9,7 +8,6 @@ setup(
         author_email='rogertu@scripps.edu',
         url='https://github.com/turoger/df_Collate',
         description='Scripts for working with gene atlas data',
-        long_description=open('README').read(),
         license='BSD3',
         keywords='gene atlas',
         classifiers=[
