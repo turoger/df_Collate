@@ -1,9 +1,8 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
-        name='ukbb_scripts',
+        name='dfCollate',
         version='0.0.0',
-        scripts='df_Collate',
         author='Roger Tu',
         author_email='rogertu@scripps.edu',
         url='https://github.com/turoger/df_Collate',
@@ -17,6 +16,5 @@ setup(
             'License :: OSI Approved :: BSD3 License',
             'Programming Language :: Python :: 3',
             ],
-        packages=['df_Collate',],
+        packages=['dfCollate'],
         )
-
