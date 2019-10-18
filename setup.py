@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
         name='dfCollate',
@@ -16,5 +16,5 @@ setup(
             'License :: OSI Approved :: BSD3 License',
             'Programming Language :: Python :: 3',
             ],
-        packages=['dfCollate'],
+        packages=find_packages(),
         )
