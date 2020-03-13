@@ -1,19 +1,19 @@
 # This is a work in progress.
-1. Dataframe Collater Function
+## Dataframe Collater Function
 This repository uses dask to work through large UK Biobank Summary Statistics.  Given a directory of phenotypes from UK Biobank, it will iterate through the directorys to assemble a large dataframe.
 
-2. Description 
-	a. Overview
- 	b. Motivation
- 	c. Features
- 	d. Re-use and contributions statement 
+## Description 
+	1. Overview
+ 	2. Motivation
+ 	3. Features
+ 	4. Re-use and contributions statement 
 
-3. Getting Started
- 	a. Requirements
+## Getting Started
+ 	1. Requirements <br>
 		* clone the repository and run ...
- 	b. Dependencies
- 	c. Step-by-step installation
- 	d. Unit tests
+ 	2. Dependencies
+ 	3. Step-by-step installation
+ 	4. Unit tests
 
 4. Usage
  	a. How to use
